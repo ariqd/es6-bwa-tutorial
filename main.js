@@ -1,14 +1,18 @@
 // ES5: var
-var myName = "Ariq Daffa";
-myName = "Sinarmas";
-myName = "Developer";
+// var myCars = ["BMW", "Tesla", "Toyota"];
 
-console.log(myName);
+// for (var i = 0; i < myCars.length; i++) {
+//   console.log(myCars[i]);
+// }
 
-// ES 6: const (constants)
-// Tidak bisa diubah
-const myCar = "Honda freed"
-// myCar = "Fortuner"; // Akan error
+// console.log(i);
 
-console.log(myCar);
+// ES 6: let
+// Mencegah variabel diinisalisasi diluar scope
+const myCars = ["BMW", "Tesla", "Toyota"];
 
+for (let i = 0; i < myCars.length; i++) {
+  console.log(myCars[i]);
+}
+
+console.log(i);
