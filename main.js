@@ -1,10 +1,28 @@
 // Ambil element
-const user = document.getElementById("user");
+const cart = document.getElementById("cart");
 
 // ES5
-// const user_logged = "Ariq";
-// user.innerHTML = "Hi, " + user_logged + ". Apa kabar?";
+// function addProduct(name, category) {
+//   return {
+//     name: name,
+//     category: category,
+//   };
+// }
+
+// var getProduct = addProduct("iPhone 11", "Gadget");
+
+// console.log(getProduct);
 
 // ES 6
-const user_logged = "Ariq";
-user.innerHTML = `Hi ${user_logged}, apa kabar?`
+function addProduct(name, category) {
+  return {
+    name,
+    category,
+  };
+}
+
+var getProduct = addProduct("iPhone 11", "Gadget");
+
+// console.log(getProduct);
+
+cart.innerHTML = `Product 1: ${getProduct.name},  category ${getProduct.category}`;
