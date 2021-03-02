@@ -11,12 +11,27 @@ class Student {
   }
 
   join() {
+    console.log(this.username + " telah bergabung pada kelas " + this.id_kelas);
+  }
+
+  countMembers() {
+    console.log("Tersedia 100 Member");
+  }
+}
+
+class Subscription extends Student {
+  constructor(username, paket) {
+    super(username);
+    this.paket = paket;
+  }
+
+  joinedPackage() {
     console.log(
-      this.username + " telah bergabung pada kelas " + this.id_kelas
+      `Hi ${this.username}, kamu telah berlangganan paket ${this.paket}`
     );
   }
 }
 
-let addStudent = new Student("ariqd", "123123", 33);
-
-addStudent.join();
+let addSubscription = new Subscription("ariqd", "Premium");
+addSubscription.joinedPackage();
+addSubscription.countMembers();
