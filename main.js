@@ -1,20 +1,22 @@
 // Ambil element
 const skills = document.getElementById("skills");
+const primarySkill = document.getElementById("primarySkill");
 
-// ES 6
+// Inisialisasi Array
 const mySkills = ["UX Design", "Web Development", "Video Editor"];
-// console.log(mySkills[0]);
-// skills.innerHTML = mySkills[0];
 
-mySkills.push("Dev Ops");
-
-let parent = "<ul>";
-
-mySkills.forEach((skill) => {
-  console.log(skill);
-  parent += `<li>${skill}</li>`;
+// Map
+const printSkills = mySkills.map((skill) => {
+  return skill;
 });
 
-parent += "</ul>";
+skills.innerHTML = printSkills;
 
-skills.innerHTML = parent;
+// Filter
+const myPrimarySkill = mySkills.filter((skill) => {
+  return skill === "UX Design"; // -> return yang sama dengan UX Design
+  //   return skill !== "Video Editor"; // -> return selain video editor
+});
+
+console.log(myPrimarySkill);
+primarySkill.innerHTML = myPrimarySkill;
