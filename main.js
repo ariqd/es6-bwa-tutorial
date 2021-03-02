@@ -6,8 +6,9 @@ myName = "Developer";
 console.log(myName);
 
 // ES 6: const (constants)
+// Tidak bisa diubah
 const myCar = "Honda freed"
-myCar = "Fortuner";
+// myCar = "Fortuner"; // Akan error
 
 console.log(myCar);
 
